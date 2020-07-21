@@ -1,4 +1,4 @@
-### Doctrine entity to manipulate users
+### Doctrine entity to manipulate users on Symfony
 
 Install the package:
 

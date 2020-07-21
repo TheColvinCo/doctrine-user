@@ -1,9 +1,11 @@
 {
   "name": "colvin/doctrine-user",
   "type": "library",
-  "description": "Doctrine entity to manipulate users",
+  "description": "Doctrine entity to manipulate users on Symfony",
   "keywords": [
     "doctrine",
+    "doctrine-bundle",
+    "symfony",
     "entity",
     "database"
   ],

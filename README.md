@@ -18,7 +18,7 @@ doctrine:
                 alias: Colvin
 ```
 
-Use the User class as a security provider:
+Configure the `User` class as a security provider in `security.yaml`:
 
 ```
 security:
@@ -30,4 +30,12 @@ security:
             entity:
                 class: Colvin\Doctrine\Entity\User
                 property: username
+```
+
+Register the `UserRepository` as a service in `services.yaml`:
+
+```
+services:
+    Colvin\Doctrine\Repository\UserRepository:
+        tags: ['doctrine.repository_service']
 ```

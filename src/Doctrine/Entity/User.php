@@ -6,9 +6,8 @@ namespace Colvin\Doctrine\Entity;
 
 use Colvin\Doctrine\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
-use Ramsey\Uuid\Doctrine\UuidGenerator;
-use Ramsey\Uuid\UuidInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Bridge\Doctrine\IdGenerator\UuidV4Generator;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
@@ -19,9 +18,9 @@ class User implements UserInterface
      * @ORM\Id
      * @ORM\Column(type="uuid", unique=true)
      * @ORM\GeneratedValue(strategy="CUSTOM")
-     * @ORM\CustomIdGenerator(class=UuidGenerator::class)
+     * @ORM\CustomIdGenerator(class=UuidV4Generator::class)
      */
-    private UuidInterface $id;
+    private $id;
 
     /**
      * @ORM\Column(type="string", length=180, unique=true)
@@ -38,7 +37,7 @@ class User implements UserInterface
      */
     private string $password;
 
-    public function getId(): ?UuidInterface
+    public function getId()
     {
         return $this->id;
     }

@@ -21,7 +21,7 @@
   "require": {
     "php": ">=7.4.0",
     "doctrine/doctrine-bundle": "^2.1",
-    "ramsey/uuid-doctrine": "^1.6",
+    "symfony/uid": "^5.2",
     "symfony/security-core": "^5.0"
   },
   "autoload": {
